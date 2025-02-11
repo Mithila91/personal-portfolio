@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import Image from "next/image"
+//import Image from "next/image"
 import cn from "clsx"
 
 const projects = [
