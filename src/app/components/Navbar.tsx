@@ -19,11 +19,11 @@ export function Navbar() {
       animate={{ y: 0 }}
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-4 md:px-6 bg-background/80 backdrop-blur-sm"
     >
-      <Link href="/" className="text-xl font-bold">
+      <Link href="/" className="text-xl font-bold z-50">
         Logo
       </Link>
       <button
-        className="md:hidden text-white"
+        className="md:hidden text-white z-50"
         onClick={() => setIsOpen(!isOpen)}
       >
         <svg
@@ -58,13 +58,26 @@ export function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="mt-44 fixed inset-0 z-40 backdrop-blur-lg flex flex-col items-center justify-center"
+            className="fixed inset-0 z-40 w-full h-screen bg-customPurple backdrop-blur-lg flex flex-col items-center justify-center"
           >
             <button
-              className="absolute top-4 right-4 text-white"
+              className="absolute top-4 right-4 text-white z-50"
               onClick={() => setIsOpen(false)}
             >
-
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
             </button>
             <nav className="flex flex-col items-center gap-8">
               {navItems.map((item) => (
