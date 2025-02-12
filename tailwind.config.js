@@ -13,6 +13,10 @@ module.exports = {
       boxShadow: {
         'custom-light': '0 0 10px rgba(85, 62, 183, 0.5)',
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'radial-from-purple-to-black': 'radial-gradient(rgba(85, 62, 183, 0.3) 0%, rgba(0, 0, 0, 1) 100%)',
+      },
     },
   },
   plugins: [],

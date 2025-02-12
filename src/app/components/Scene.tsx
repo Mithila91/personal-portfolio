@@ -5,12 +5,18 @@ import dynamic from 'next/dynamic'
 const ThreeScene = dynamic(() => import('./ThreeScene'), {
   ssr: false,
   loading: () => (
-    <div className="flex items-center justify-center h-full">
-      <div className="text-white">Loading 3D Scene...</div>
+    <div className="w-full h-full flex items-center justify-center text-white">
+      Loading...
     </div>
   )
 })
 
 export default function Scene() {
-  return <ThreeScene />
+  return (
+    <div className="w-full h-full relative bg-transparent">
+      <div className="absolute inset-0">
+        <ThreeScene />
+      </div>
+    </div>
+  )
 }
