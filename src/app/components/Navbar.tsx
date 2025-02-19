@@ -1,17 +1,23 @@
 "use client"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
-const navItems = [
-  { href: "/about", label: "About" },
-  { href: "/tech", label: "Tech" },
-  { href: "/projects", label: "Projects" },
-  { href: "/contact", label: "Contact" },
-];
-
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [navItems, setNavItems] = useState<{ href: string; label: string }[]>([]);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Client-side code here
+      setNavItems([
+        { href: '/', label: 'Home' },
+        { href: '/about', label: 'About' },
+        { href: '/projects', label: 'Projects' },
+        { href: '/contact', label: 'Contact' },
+      ]);
+    }
+  }, []);
 
   return (
     <motion.header
@@ -103,3 +109,5 @@ export function Navbar() {
     </motion.header>
   );
 }
+
+export default Navbar;

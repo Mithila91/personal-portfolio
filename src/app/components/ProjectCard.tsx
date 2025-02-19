@@ -165,7 +165,7 @@ export function Projects() {
                   className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 p-2 rounded-full bg-customPurple hover:bg-customLightPurple transition-colors"
                   onClick={() => paginate(-1)}
                 >
-                  <ChevronLeft className="w-6 h-6 text-white" />
+                  <ChevronLeft className="w-6 h-6  text-white" />
                 </button>
                 <button
                   className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 p-2 rounded-full bg-customPurple hover:bg-customLightPurple transition-colors"
